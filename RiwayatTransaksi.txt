@@ -1,0 +1,2 @@
+*File Ini mencatat semua transaksi yang pernah terjadi
+

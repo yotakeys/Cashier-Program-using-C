@@ -1,0 +1,10 @@
+ID - BARANG - HARGA
+
+1 MinyakGoreng 10000
+2 Sabun 50000
+3 MouseBos 50000
+4 Keyboard 100000
+5 laptop 1000000
+6 cakno 100000000
+10 key 2921
+1282 yo 29198
