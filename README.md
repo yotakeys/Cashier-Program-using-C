@@ -8,4 +8,4 @@ This program using Indonesian Language
 Read InstructionSheet for the way to use this Project
 Run Final Kasir.exe for the program
 
-there are some databse using biner (extension.dat)
+there are some database using biner (extension.dat)
