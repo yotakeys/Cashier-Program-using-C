@@ -6,4 +6,6 @@ I am Using DEV-C++ Project Feature, So I can do Modular Programming for this Cas
 
 This program using Indonesian Language
 Read InstructionSheet for the way to use this Project
-Run Kasir 2.0.exe for the program
+Run Final Kasir.exe for the program
+
+there are some databse using biner (extension.dat)
