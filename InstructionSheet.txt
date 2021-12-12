@@ -1,0 +1,63 @@
+*******************************************************************
+MAIN PROGRAM (Final Kasir.exe)
+1. Buka dan jalankan final kasir.exe
+2. Akan terdapat beberapa pilihan menu
+	- Kasir
+	- Riwayat Transaksi
+	- Master Barang
+	- Laporan Keuangan
+	- Keluar
+3. Pilih yang menu yang ingin dijalankan
+4. Bila ingin keluar ketik '5'
+*******************************************************************
+MASTER BARANG
+
+1. Setelah memilih menu Master Barang
+2. Berisi, daftar barang, dan command untuk manipulasi daftar barang
+3. Pilih sesuai petunjuk penggunaan dalam program
+4. bisa untuk menambahkan barang, menghapus, mengedit, dan juga menambah stok
+5. Jika ingin keluar ketik exit
+
+*******************************************************************
+KASIR
+
+1. Program akan menampilakan list barang (Kode | NamaBarang)
+2. Masukkan kode barang yang dimasukkan beserta jumlah pembelian
+3. Untuk menghapus atau mengubah barang yang sudah diinput,
+	Masukkan ulang kode barang dan jumlah baru yang diinginkan
+	Jika hapus maka banyak = 0
+3. Jika input pembelian barang sudah selesai maka input kode barang 0
+4. Lalu akan keluar total harga yang harus dibayar
+5. Input uang yang dibayar, lalu akan tampil kembalian yang harus dibayar
+6. Lalu lihat StrukBelanja.txt untuk cetak struk transaksi
+7. Setiap transaksi juga akan dicatat dalam RiwayatTranasaksi.txt
+8. Input 'y' bila ingin mengulan program jika ada transaksi lain, dan input
+	't' atau chara lain, bila ingin kembali ke menu
+
+*******************************************************************
+LAPORAN KEUANGAN
+
+1. Setelah memilih Laporan keuangan
+2. Akan ditampilakan list barang yang ada beserta keteranganya 
+	(ID,Nama,Harga,Stok,Modal,Penjualan)
+3. Sistem akan otomatis menghitung total modal, dan juga penjualan yang didapat
+4. Lalu akan menghitung apakah berapa keuntungan ataupun kerugianya
+5. Tekan enter untuk kembali ke menu utama
+
+*******************************************************************
+RIWAYAT TRANSAKSI
+
+1. Setelah memilih menu Riwayat transaksi
+2. Akan terdapat list riwayat transaksi yang terjadi
+	(ID,Nama,Jumlah, dan waktu)
+	Beserta total akumulasi penjualan  tiap barang pada suatu periode
+3. Ketik search untuk mencari transaksi pada suatu periode tertentu
+	dengan memasukkan waktu awal dan akhir
+4. Ketik exit untuk kembali ke menu utama
+*******************************************************************
+StrukBelanja
+
+* StrukBelanja berguna untuk struk pembelanjaan yang akan diberikan kepada
+	pembeli setelah melakukan transaksi dan bersifat overwrite
+
+*******************************************************************
