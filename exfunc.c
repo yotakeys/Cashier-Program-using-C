@@ -42,6 +42,8 @@ int copydatabarang(struct daftarbarang arrbarang[]){
             strcpy(arrbarang[bnykbarang].nama,client.nama);
             arrbarang[bnykbarang].harga=client.harga;
             arrbarang[bnykbarang].stok=client.stok;
+            arrbarang[bnykbarang].modal=client.modal;
+            arrbarang[bnykbarang].total=client.total;
             bnykbarang++;
          }
       }
@@ -108,9 +110,9 @@ void laporan(struct daftarbarang arrbarang[],int bnykdata){
         if(client.id==penanda)continue;
         penanda=client.id;
         if(arrbarang[i].id==client.id){
-        	client.jumlah+=arrbarang[i].jumlah;
         	client.stok-=arrbarang[i].jumlah;
-        	client.total=client.total+(client.jumlah*client.harga);
+        	client.total+=(arrbarang[i].jumlah*client.harga);
+        	arrbarang[i].jumlah=0;
         	fseek( fp, ( client.id - 1 ) * sizeof( struct daftarbarang ), SEEK_SET );         
     		fwrite( &client, sizeof( struct daftarbarang ), 1, fp );
         	break;
@@ -148,6 +150,5 @@ void plusriwayat(struct daftarbarang arrbarang[],int bnykdata){
       }
     fclose( fp );
 }
-
 
 
