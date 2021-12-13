@@ -16,13 +16,18 @@ MASTER BARANG
 2. Berisi, daftar barang, dan command untuk manipulasi daftar barang
 3. Pilih sesuai petunjuk penggunaan dalam program
 4. bisa untuk menambahkan barang, menghapus, mengedit, dan juga menambah stok
-5. Jika ingin keluar ketik exit
+5. Petunjuk untuk edit, insert, hapus terdapat pada program, tinggal megnikuti alur
+6. Jika ingin menambah stok barang, ketik stok, alu masukkan id barang yang
+	ingin ditambahkan, lalu masukkan harga pembelian stok tersebut
+7. Jika ingin keluar ketik exit
 
 *******************************************************************
 KASIR
 
-1. Program akan menampilakan list barang (Kode | NamaBarang)
+1. Program akan menampilakan list barang (Kode | NamaBarang | stok)
 2. Masukkan kode barang yang dimasukkan beserta jumlah pembelian
+	Jika jumlah pembelian melebih ketersediaan stok, akan muncul 
+	pemberitahuan
 3. Untuk menghapus atau mengubah barang yang sudah diinput,
 	Masukkan ulang kode barang dan jumlah baru yang diinginkan
 	Jika hapus maka banyak = 0
