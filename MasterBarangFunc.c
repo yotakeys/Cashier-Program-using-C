@@ -39,7 +39,7 @@ void masterbarang(struct daftarbarang arrbarang[],int bnykdata){
         else if(strcmp(command,"stok")==0){
         	printf( "Enter ID Barang\n? " );
             scanf( "%d", &client.id );
-         	printf("Enter Banyak barang, harga\n?");
+         	printf("Enter Banyak barang, harga total\n?");
             int hargatem;
             unsigned long long stoktem; 
             scanf("%d %lld",&stoktem,&hargatem);
