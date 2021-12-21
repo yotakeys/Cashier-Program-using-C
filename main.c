@@ -23,7 +23,7 @@ int main(){
 	printf("Pilih (1/2/3/4/5) : ");
 	scanf("%d",&choose);
 	if(choose==1){
-		kasir(arrbarang,bnykdata);
+		kasir();
 	}
 	else if(choose==2){
 		riwayattransaksi(arrbarang,bnykdata);
