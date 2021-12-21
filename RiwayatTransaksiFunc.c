@@ -14,9 +14,6 @@ void riwayattransaksi(struct daftarbarang arrbarang[],int bnykdata){
     for(i=1;i<bnykdata;i++){
     	arrbarang[i].jumlah=0;
     }
-	unsigned long long modal=0;
-	unsigned long long pendapatan=0;
-	long long int laba;
 	FILE *fp;
     struct riwayat client = { 0, "", 0,"",0,0,0};
 
