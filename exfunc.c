@@ -104,21 +104,16 @@ void laporan(struct daftarbarang arrbarang[],int bnykdata){
     int i;
 	for(i=1;i<bnykdata;i++){
 	if(arrbarang[i].jumlah==0)continue;
-    int penanda=0;
-      while ( !feof( fp ) ) { 
-         fread( &client, sizeof( struct daftarbarang ), 1, fp );
-        if(client.id==penanda)continue;
-        penanda=client.id;
-        if(arrbarang[i].id==client.id){
-        	client.stok-=arrbarang[i].jumlah;
-        	client.total+=(arrbarang[i].jumlah*client.harga);
-        	arrbarang[i].jumlah=0;
-        	fseek( fp, ( client.id - 1 ) * sizeof( struct daftarbarang ), SEEK_SET );         
-    		fwrite( &client, sizeof( struct daftarbarang ), 1, fp );
-        	break;
-    		}
-         }
-      }
+	client.harga=arrbarang[i].harga;
+    client.stok=arrbarang[i].stok-arrbarang[i].jumlah;
+    client.total=arrbarang[i].total+(arrbarang[i].jumlah*arrbarang[i].harga);
+    client.jumlah=0;
+    client.id=arrbarang[i].id;
+    strcpy(client.nama,arrbarang[i].nama);
+    client.modal=arrbarang[i].modal;
+    fseek( fp, ( client.id - 1 ) * sizeof( struct daftarbarang ), SEEK_SET );         
+    fwrite( &client, sizeof( struct daftarbarang ), 1, fp );
+    }
     fclose( fp );
 }
 
