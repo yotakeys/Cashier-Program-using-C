@@ -5,7 +5,7 @@
 #include <time.h>
 #include "header.h"
 
-struct daftarbarang arrbarang[];
+struct daftarbarang arrbarang[1000];
 void kasir();
 
 int main(){
@@ -26,9 +26,11 @@ int main(){
 		kasir();
 	}
 	else if(choose==2){
+		bnykdata=copydatabarang(arrbarang);
 		riwayattransaksi(arrbarang,bnykdata);
 	}
 	else if(choose==3){
+		bnykdata=copydatabarang(arrbarang);
 		masterbarang(arrbarang,bnykdata);
 	}
 	else if(choose==4){
@@ -54,6 +56,10 @@ void kasir(){
     tampillist(arrbarang,bnykdata);
     cetakgaris();
     unsigned long long total=0;
+    int i;
+    for(i=1;i<bnykdata;i++){
+        	arrbarang[i].jumlah=0;
+		}
     while(1){
         int kode,banyak;
         printf("Masukkan kode barang   : ");
@@ -86,8 +92,8 @@ void kasir(){
     printf("Kembalian         : %lld\n",kembali);
     getchar();
     cetakstruk(arrbarang,bnykdata,total,duit,kembali);
-    laporan(arrbarang,bnykdata);
     plusriwayat(arrbarang,bnykdata);
+    laporan(arrbarang,bnykdata);
     printf("Transaksi lain? (y/t) : ");
     scanf("%c",&jwb);
     getchar();
